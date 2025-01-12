@@ -6,6 +6,8 @@ import { IoBagOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import HeaderSearch from "./HeaderSearch";
 import User from "./Auth";
+import LoveProducts from "./LoveProducts";
+import Cart from "./Cart";
 import { Badge } from "@mui/material";
 const Header = () => {
   return (
@@ -22,15 +24,11 @@ const Header = () => {
         </div>
         <div className="top-right col-sm-4 pt-3 text-end">
           <User />
-          <Badge badgeContent={4} color="primary" className="badgeColor mx-2">
-            <CiHeart className=" btnSearch " />
-          </Badge>
-          <Badge badgeContent={4} color="primary" className="badgeColor mx-2">
-            <IoBagOutline className="btnSearch" />
-          </Badge>
+          <LoveProducts />
+          <Cart />
         </div>
       </div>
-      <div className="bottom-header">haha</div>
+      <div className="bottom-header container-fluid"></div>
     </div>
   );
 };

@@ -4,26 +4,128 @@
 }
 
 body {
-  font-family: 'Spectral', sans-serif !important;
+  font-family: "Spectral", sans-serif !important;
 }
 
 .headerSearch .search-input {
   border: none;
   border-bottom: 1px solid #f2f2f2;
   outline: none;
-  flex: 1; 
-  font-size: 14px; 
+  flex: 1;
+  font-size: 14px;
   min-width: 280px;
   height: 30px;
 }
-.btnSearch{
+.btnSearch {
   border: none;
   font-size: 20px;
   cursor: pointer;
 }
 
 .badgeColor .MuiBadge-colorPrimary {
-  background-color: #fdb5b9; /* Màu sắc cho content badge */
+  background-color: #fdb5b9; 
+}
+/* headerBottom */
+.dropdown-parent {
+  position: relative;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 165%;
+  left: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  min-width: 200px;
+}
+.dropdown-parent:hover .dropdown-menu {
+  display: block;
+}
+.dropdown-item {
+  padding: 8px 16px;
+  white-space: normal; /* Cho phép xuống dòng */
+  color: #fdb5b9;
+  max-width: 200px; /* Giới hạn độ rộng */
+  overflow-wrap: break-word; /* Tự ngắt dòng khi nội dung dài */
+  word-break: break-word; /* Cắt dòng nếu cần thiết */
+  text-align: left; /* Căn lề trái cho văn bản */
 }
 
+.dropdown-item:hover {
+  background-color: #fdb7bb;
+  transition: color 0.1s ease-in-out
+}
+.dropdown-item:hover a {
+  color: #ffffff !important;
+}
+.dropdown-item a {
+  color: #fdb5b9;
+  text-decoration: none;
+}
+.dropdown-menu {
+  border-top: 3px solid #fdb5b9;
+  border-radius: 0;
+}
+.dropContainer{
+  position: absolute;
+  /* background-color: red; */
+  height: 30px;
+  width: 170px;
+}
+.header {
+  border-bottom: 3px solid #dcdcdc; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+/* custom link */
+.list-inline-item a {
+  color: #333333; 
+  text-decoration: none;
+  font-size: 16px; 
+  transition: color 0.3s ease; 
+}
 
+.list-inline-item a:hover {
+  color: #fdb5b9;
+}
+
+/* auth */
+.logoAuth{
+  height: auto;
+}
+.btnAuth{
+  text-align: start;
+  margin: 1px;
+  width: 100%;
+  border: none !important;
+}
+.btn:hover,
+.btn:focus,
+.btn:active {
+  background-color: #f7f7f7 !important;
+  color: #fdb5b9 !important;
+  border: none !important;
+}
+.btnAuth.selected {
+  background-color: #f7f7f7 !important;
+  color: #fdb5b9 !important;
+  border: none !important;
+}
+.logoImage {
+  width: 180px; 
+  height: auto; 
+  max-width: 100%; 
+}
+.bdr{
+  border-right: 1px solid #ccc;
+}
+.dialog{
+  padding: 15px;
+}
+input{
+  border-radius: 5px;
+  border: solid 1px #ccc
+}

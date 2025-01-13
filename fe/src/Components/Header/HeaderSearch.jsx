@@ -33,7 +33,6 @@ const HeaderSearch = () => {
         }
       }
     }, 100); 
-
     // Dọn dẹp interval khi component unmount
     return () => clearInterval(typingEffect);
   }, []); 

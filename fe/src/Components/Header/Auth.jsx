@@ -9,18 +9,13 @@ import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import Typography from "@mui/material/Typography";
 import { CiUser } from "react-icons/ci";
+import { useState } from "react";
+import Login from "../Login";
+import Register from "../Register";
+import ForgotPassword from "../ForgotPassword";
 
-const BootstrapDialog = styled(Dialog)(({ theme }) => ({
-  "& .MuiDialogContent-root": {
-    padding: theme.spacing(2),
-  },
-  "& .MuiDialogActions-root": {
-    padding: theme.spacing(1),
-  },
-}));
-
-export default function CustomizedDialogs() {
-  const [open, setOpen] = React.useState(false);
+const Auth = () => {
+  const [open, setOpen] = useState(false);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -28,42 +23,61 @@ export default function CustomizedDialogs() {
   const handleClose = () => {
     setOpen(false);
   };
-
+  const [select, setSelect] = useState("login");
+  const handleSelect = (action) => {
+    setSelect(action);
+    console.log("selected", select);
+  };
   return (
-    <React.Fragment>
+    <>
       <CiUser className="btnSearch" onClick={handleClickOpen} />
 
-      <BootstrapDialog
-        onClose={handleClose}
-        aria-labelledby="customized-dialog-title"
-        open={open}
-      >
-        <DialogTitle sx={{ m: 0, p: 2 }} id="customized-dialog-title">
-          ĐĂNG NHẬP
-        </DialogTitle>
-        <IconButton
-          aria-label="close"
-          onClick={handleClose}
-          sx={(theme) => ({
-            position: "absolute",
-            right: 8,
-            top: 8,
-            color: theme.palette.grey[500],
-          })}
-        >
-      
-        </IconButton>
-        <DialogContent dividers>
-          <Typography gutterBottom>hi</Typography>
-          <Typography gutterBottom>ha</Typography>
-          <Typography gutterBottom>
-            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo
-            cursus magna, vel scelerisque nisl consectetur et. Donec sed odio
-            dui. Donec ullamcorper nulla non metus auctor fringilla.
-          </Typography>
-        </DialogContent>
-        
-      </BootstrapDialog>
-    </React.Fragment>
+      <Dialog onClose={handleClose} open={open} maxWidth="md" fullWidth>
+        <div className="container dialog">
+          <div className="row">
+            <div className="col-3 bdr p-2">
+              <div className="logo2 text-center">
+                <img
+                  src="https://bizweb.dktcdn.net/thumb/medium/100/520/624/themes/974135/assets/shop_logo_image.png?1731543625371"
+                  alt="logo"
+                  className="logoImage"
+                />
+              </div>
+              <div
+                className={`btn btnAuth pt-3 ${
+                  select === "login" ? "selected" : ""
+                }`}
+                onClick={() => handleSelect("login")}
+              >
+                Đăng nhập
+              </div>
+              <div
+                className={`btn btnAuth pt-3 ${
+                  select === "forgot" ? "selected" : ""
+                }`}
+                onClick={() => handleSelect("forgot")}
+              >
+                Quên mật khẩu
+              </div>
+              <div
+                className={`btn btnAuth pt-3 ${
+                  select === "register" ? "selected" : ""
+                }`}
+                onClick={() => handleSelect("register")}
+              >
+                Đăng ký
+              </div>
+            </div>
+            <div className="col-9">
+              {select === "login" && <Login />}
+              {select === "register" && <Register />}
+              {select === "forgot" && <ForgotPassword />}
+            </div>
+          </div>
+        </div>
+      </Dialog>
+    </>
   );
-}
+};
+
+export default Auth;

@@ -1,14 +1,12 @@
 import React from "react";
 // import { CiSearch } from "react-icons/ci";
-import { CiUser } from "react-icons/ci";
-import { CiHeart } from "react-icons/ci";
-import { IoBagOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
-import HeaderSearch from "./HeaderSearch";
 import User from "./Auth";
-import LoveProducts from "./LoveProducts";
 import Cart from "./Cart";
-import { Badge } from "@mui/material";
+import HeaderSearch from "./HeaderSearch";
+import LoveProducts from "./LoveProducts";
+import HeaderMenu from "./HeaderMenu";
+
 const Header = () => {
   return (
     <div className="header container-fluid">
@@ -19,16 +17,17 @@ const Header = () => {
             <img
               src="https://bizweb.dktcdn.net/thumb/medium/100/520/624/themes/974135/assets/shop_logo_image.png?1731543625371"
               alt="logo"
+              className="logoAuth"
             />
           </Link>
         </div>
-        <div className="top-right col-sm-4 pt-3 text-end">
+        <div className="top-right col-sm-4 pt-3 text-end pe-5">
           <User />
           <LoveProducts />
           <Cart />
         </div>
       </div>
-      <div className="bottom-header container-fluid"></div>
+      <HeaderMenu />
     </div>
   );
 };

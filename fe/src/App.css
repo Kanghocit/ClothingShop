@@ -358,3 +358,41 @@ input {
 .slider .slick-arrow.slick-prev {
   left: 25px !important;
 }
+/* AboutUs */
+.aboutImg {
+  height: auto;
+  max-width: 500px;
+  margin: 20px;
+}
+.img {
+  max-width: 100%;
+  height: auto;
+}
+.aboutHeader hr {
+  height: 1px;
+  width: 10px;
+  margin: 0;
+  padding: 0;
+  border: red 2px solid;
+}
+.aboutLink{
+  text-decoration: none;
+  color: #000;
+  font-size: 25px;
+}
+.aboutLink:hover{
+  color: #fdb5b9;
+}
+.subAbout{
+  font-size: 13px;
+  color: #888;
+}
+.btnAbout{
+  background-color: #fdb5b9;
+  color: white;
+}
+.btnAbout:hover{
+  background-color: white;
+  color: #fdb5b9;
+  border: 1px solid #fdb5b9;
+}

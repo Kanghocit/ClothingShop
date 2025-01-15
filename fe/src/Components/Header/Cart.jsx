@@ -70,7 +70,7 @@ const Cart = () => {
                 <IoClose />
               </IconButton>
               <img
-                className="buyImg"
+                className="buyImg "
                 src="https://file.hstatic.net/200000306687/file/giphy__1__c91b6f02cea04a969d655681bb73caf8_small.gif"
                 alt=""
               />
@@ -83,10 +83,10 @@ const Cart = () => {
                 <img
                   src="https://bizweb.dktcdn.net/100/520/624/products/3d47e0b70d0b318948f8bb351518d1ad-503c3ec4616745e5aeec758d395e8d47-5fd2beca1a7b4da9b8adfc0478bd3bf2.jpg?v=1720423781723"
                   alt=""
-                  className=""
+                  className="productImg"
                 />
               </div>
-              <div className="col-7 ps-2">
+              <div className="col-7 ps-3">
                 <div className="productName">
                   ÁO THUN LOGO HAI TONE CHACOAL Xanh đậm / S / Cotton
                 </div>

@@ -5,6 +5,24 @@
 
 body {
   font-family: "Spectral", sans-serif !important;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .headerSearch .search-input {
@@ -79,6 +97,9 @@ body {
 .header {
   border-bottom: 3px solid #dcdcdc;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  z-index: 1000;
+  background-color: white;
 }
 /* custom link */
 .list-inline-item a {
@@ -168,8 +189,7 @@ input {
   border-bottom: 1px solid #ddd;
   padding: 15px 0;
 }
-
-img {
+.productImg {
   height: 100%;
   max-width: 100px; /* Đảm bảo ảnh không quá lớn */
   object-fit: contain;
@@ -239,7 +259,6 @@ img {
 .addNote {
   position: relative;
   cursor: pointer !important;
-
 }
 .note {
   position: absolute;
@@ -279,7 +298,7 @@ img {
 
 .note.close {
   opacity: 0;
-  transform: translateY(50px); 
+  transform: translateY(50px);
 }
 
 .noteText {
@@ -296,7 +315,7 @@ img {
   transition: background-color 0.2s;
 }
 /* loveProduct */
-.nameLoveText{
+.nameLoveText {
   padding-left: 120px;
   padding-top: 10px;
   font-size: 20px;
@@ -308,6 +327,34 @@ img {
   color: white;
   display: flex;
 }
-.closeButton{
+.closeButton {
   cursor: pointer;
+}
+.slider {
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+.imgSlide {
+  width: 100%;
+  height: auto;
+}
+.slider .slick-arrow {
+  position: absolute;
+  top: 60%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px !important;
+  height: 40px !important;
+  /* background-color: #000; */
+  /* border-radius: 100% !important; */
+}
+.slider .slick-arrow.slick-next {
+  right: 25px !important;
+}
+.slider .slick-arrow.slick-prev {
+  left: 25px !important;
 }

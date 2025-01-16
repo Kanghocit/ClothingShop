@@ -368,31 +368,112 @@ input {
   max-width: 100%;
   height: auto;
 }
-.aboutHeader hr {
+.aboutHeader hr,
+.hc-header hr {
   height: 1px;
   width: 10px;
   margin: 0;
   padding: 0;
   border: red 2px solid;
 }
-.aboutLink{
+.aboutLink {
   text-decoration: none;
   color: #000;
   font-size: 25px;
 }
-.aboutLink:hover{
+.aboutLink:hover {
   color: #fdb5b9;
 }
-.subAbout{
+.subAbout {
   font-size: 13px;
   color: #888;
 }
-.btnAbout{
+.btnAbout {
   background-color: #fdb5b9;
   color: white;
 }
-.btnAbout:hover{
+.btnAbout:hover,
+.btnAbout:focus,
+.btnAbout:active {
   background-color: white;
+  color: #fdb5b9 !important;
+  border: 1px solid #fdb5b9 !important ;
+}
+/* home-collection */
+.hc-list {
+  display: flex;
+  gap: 1rem;
+  padding-left: 10px; /* Đảm bảo phần tử đầu tiên có khoảng trống để không bị che */
+  overflow-x: auto; /* Tạo thanh cuộn ngang khi cần */
+  scroll-snap-type: x mandatory; /* Hỗ trợ snap khi cuộn */
+}
+.hc-list::-webkit-scrollbar {
+  height: 6px;
+}
+.hc-list-item {
+  display: inline-flex;
+  flex-direction: column; /* Ensures image and text stack vertically */
+  align-items: center;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 100%;
+  scroll-snap-align: start;
+}
+
+.hc-item-image {
+  width: fit-content; /* Ensures image adapts dynamically */
+  max-width: 100%; /* Prevents it from exceeding container size */
+  overflow: hidden; /* Trims any overflowing image content */
+}
+
+.hc-img {
+  display: block;
+  max-width: 130px;
+  height: auto;
+  border-radius: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+.hc-item-image:hover .hc-img {
+  transform: scale(0.95) rotate(15deg); /* Nhỏ đi 10% và xoay 45 độ */
+}
+.hc-list-item:hover span {
+  font-weight: bold;
+  font-size: 16px;
   color: #fdb5b9;
-  border: 1px solid #fdb5b9;
+}
+
+/* home-flashsale */
+.img-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.img-wrapper img {
+  width: 100%;
+  display: block;
+  border-radius: 5px; /* Optional for rounded corners */
+}
+
+.datatime {
+  position: absolute;
+  bottom: 40%; /* Adjust placement relative to the bottom of the image */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+.time {
+  background-color: white; /* Semi-transparent background */
+  color: #000; /* White text */
+  font-weight: bold;
+  font-size: 14px;
+  padding: 10px 15px;
+  border-radius: 7px;
+  text-align: center;
+  min-width: 40px;
+}
+
+.time-box-span {
+  color: white;
 }

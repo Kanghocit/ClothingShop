@@ -2,7 +2,8 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import Card from "./Card";
+import Card from "./Card/index";
+import Slider from "react-slick";
 
 const HomeCollection = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -11,7 +12,6 @@ const HomeCollection = () => {
     minutes: 2,
     seconds: 2,
   });
-
   useEffect(() => {
     const countdown = setInterval(() => {
       setTimeLeft((prevTime) => {
@@ -51,6 +51,7 @@ const HomeCollection = () => {
 
     return () => clearInterval(countdown);
   }, []);
+
   return (
     <div className="homeCollection">
       <div className="hc-header row d-flex justify-content-center">
@@ -185,8 +186,11 @@ const HomeCollection = () => {
           </div>
         </div>
 
-        <div className="hf-right col-8">
-          <Card/>
+        <div className="hf-right col-8 d-flex">
+          <Card />
+          <Card />
+          <Card />
+          <Card />
         </div>
       </div>
     </div>

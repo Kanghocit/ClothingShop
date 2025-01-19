@@ -11,6 +11,9 @@ body {
 ::-webkit-scrollbar {
   width: 10px;
 }
+::-webkit-scrollbar {
+  display: none !important;
+}
 
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
@@ -453,6 +456,7 @@ input {
   width: 100%;
   display: block;
   border-radius: 5px; /* Optional for rounded corners */
+  min-height: 435px;
 }
 
 .datatime {
@@ -478,20 +482,24 @@ input {
   color: white;
 }
 /* card */
-.card{
+.card {
   border: none;
 }
-.cardImg{
+.cardImg {
   border-radius: 5px;
+  min-height: 315px;
+  width: 100%;
+  object-fit: cover;
 }
 .brand-name {
   font-size: 14px; /* Kích thước chữ nhỏ hơn */
   color: #aeaeae;
 }
-.card-name{
+.card-name {
   font-size: 16px;
 }
-.brand-name:hover, .card-name:hover{
+.brand-name:hover,
+.card-name:hover {
   color: #fdb5b9 !important;
   cursor: pointer;
 }
@@ -502,4 +510,69 @@ input {
 
 .rate .MuiRating-iconEmpty {
   color: pink; /* Màu viền hồng cho ngôi sao chưa chọn */
+}
+.card-price {
+  font-weight: bold;
+  font-size: 16px;
+  color: #ff3300;
+}
+.card-price span {
+  color: #b7b7b7;
+  text-decoration: line-through;
+  font-weight: normal;
+  font-size: 14px;
+  padding-left: 2px;
+}
+.sub-card-img {
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+}
+.sub-card-img:hover {
+  border: 1px solid pink;
+  cursor: pointer;
+}
+/* banner */
+.banner-container {
+  position: relative;
+  width: 100%;
+  height: 570px; /* Đặt độ cao cho container */
+  overflow: hidden; /* Ẩn phần ảnh bị tràn ra ngoài */
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  max-height: 570px;
+  object-fit: cover; /* Đảm bảo ảnh che kín khung */
+  transition: transform 0.3s ease-in-out; /* Hiệu ứng phóng to */
+}
+
+.banner-container:hover .banner-img {
+  transform: scale(1.1); /* Khi hover, ảnh sẽ phóng to */
+}
+
+.banner-content {
+  max-width: 360px;
+  position: absolute;
+  bottom: 40%;
+  right: 100px;
+  z-index: 10;
+  color: white;
+}
+.banner-name{
+  font-size: 30px;
+}
+.btnBanner{
+  background-color: #fdb5b9;
+  display: block; /* Đặt display thành block */
+  margin: 20px auto; /* Căn giữa theo chiều ngang */
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+.btnBanner:hover{
+  background-color: white;
+  color: #000;
 }

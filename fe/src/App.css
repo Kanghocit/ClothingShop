@@ -477,3 +477,29 @@ input {
 .time-box-span {
   color: white;
 }
+/* card */
+.card{
+  border: none;
+}
+.cardImg{
+  border-radius: 5px;
+}
+.brand-name {
+  font-size: 14px; /* Kích thước chữ nhỏ hơn */
+  color: #aeaeae;
+}
+.card-name{
+  font-size: 16px;
+}
+.brand-name:hover, .card-name:hover{
+  color: #fdb5b9 !important;
+  cursor: pointer;
+}
+.rate {
+  font-size: 18px !important;
+  color: pink !important;
+}
+
+.rate .MuiRating-iconEmpty {
+  color: pink; /* Màu viền hồng cho ngôi sao chưa chọn */
+}

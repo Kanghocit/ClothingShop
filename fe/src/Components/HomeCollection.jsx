@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import Card from "./Card";
 
 const HomeCollection = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -184,7 +185,9 @@ const HomeCollection = () => {
           </div>
         </div>
 
-        <div className="hf-right col-8"></div>
+        <div className="hf-right col-8">
+          <Card/>
+        </div>
       </div>
     </div>
   );

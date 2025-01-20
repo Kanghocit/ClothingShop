@@ -2,7 +2,7 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div class="banner-container">
+    <div class="banner-container mt-3">
       <img
         src="https://bizweb.dktcdn.net/thumb/2048x2048/100/520/624/themes/974135/assets/home_banner_lg_image_d.jpg?1731543625371"
         alt="Banner Image"

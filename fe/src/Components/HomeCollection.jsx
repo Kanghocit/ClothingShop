@@ -51,6 +51,16 @@ const HomeCollection = () => {
 
     return () => clearInterval(countdown);
   }, []);
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    arrows: true,
+  };
 
   return (
     <div className="homeCollection">
@@ -187,10 +197,16 @@ const HomeCollection = () => {
         </div>
 
         <div className="hf-right col-8 d-flex">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          <Slider {...settings} className="slider-card">
+            <Card />
+
+            <Card />
+
+            <Card />
+
+            <Card />
+          </Slider>
+          
         </div>
       </div>
     </div>

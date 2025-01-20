@@ -333,7 +333,8 @@ input {
 .closeButton {
   cursor: pointer;
 }
-.slider {
+.slider,
+.slider-card {
   width: 100%;
   box-sizing: border-box;
   position: relative;
@@ -343,7 +344,8 @@ input {
   width: 100%;
   height: auto;
 }
-.slider .slick-arrow {
+.slider .slick-arrow,
+.slider-card .slick-arrow {
   position: absolute;
   top: 60%;
   z-index: 100;
@@ -355,11 +357,26 @@ input {
   /* background-color: #000; */
   /* border-radius: 100% !important; */
 }
+.slider-card:hover .slick-arrow {
+  display: block !important;
+}
+.slider-card .slick-arrow {
+  top: 60%;
+  display: none !important;
+  position: absolute;
+  transform: translateY(-50%);
+}
 .slider .slick-arrow.slick-next {
   right: 25px !important;
 }
+.slider-card .slick-arrow.slick-next {
+  right: 1px !important;
+}
 .slider .slick-arrow.slick-prev {
   left: 25px !important;
+}
+.slider-card .slick-arrow.slick-prev {
+  left: 1px !important;
 }
 /* AboutUs */
 .aboutImg {
@@ -490,7 +507,57 @@ input {
   min-height: 315px;
   width: 100%;
   object-fit: cover;
+  position: relative !important;
 }
+
+.card-btn {
+  position: absolute !important;
+  display: none;
+  bottom: 125px;
+  left: 60px;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: 100px;
+}
+.card:hover .card-btn,.card:hover .set-love-product{
+  display: block !important;
+}
+.btn-card{
+  background-color: #f0f0f4;
+  border-radius: 5px;
+  font-size: 15px;
+}
+.btn-card:hover{
+  background-color: pink;
+  color: white;
+}
+.discount{
+  position: absolute !important;
+  background-color: #ff3300;
+  color: #fff;
+  width: fit-content;
+  height: 25px;
+  border: none;
+  top: 2px;
+  left: 10px;
+}
+.card-icon{
+  color: #d93636;
+}
+.set-love-product{
+  position: absolute !important;
+  top: 2px;
+  right: 10px;
+  display: none;
+}
+
+/* .card:hover .card-btn {
+  display: block;
+  cursor: pointer;
+  background-color: #e64a19;
+  transform: scale(1.1);
+} */
+
 .brand-name {
   font-size: 14px; /* Kích thước chữ nhỏ hơn */
   color: #aeaeae;
@@ -532,6 +599,7 @@ input {
   border: 1px solid pink;
   cursor: pointer;
 }
+
 /* banner */
 .banner-container {
   position: relative;
@@ -560,10 +628,10 @@ input {
   z-index: 10;
   color: white;
 }
-.banner-name{
+.banner-name {
   font-size: 30px;
 }
-.btnBanner{
+.btnBanner {
   background-color: #fdb5b9;
   display: block; /* Đặt display thành block */
   margin: 20px auto; /* Căn giữa theo chiều ngang */
@@ -572,7 +640,7 @@ input {
   color: white;
   cursor: pointer;
 }
-.btnBanner:hover{
+.btnBanner:hover {
   background-color: white;
   color: #000;
 }

@@ -58,7 +58,7 @@ const Cart = () => {
               <div className="buyMore mt-3">
                 <div>
                   Mua thêm{" "}
-                  <span className="discount">
+                  <span className="discount-span">
                     {(money - moneyUsed).toLocaleString()}đ
                   </span>{" "}
                   để được miễn phí giao hàng toàn quốc

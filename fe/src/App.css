@@ -159,7 +159,7 @@ input {
 .buyMore {
   font-size: 12px;
 }
-.discount {
+.discount-span {
   color: #fdc0c3;
   border: solid 1px #fdc0c3;
   padding: 5px;
@@ -519,19 +519,20 @@ input {
   z-index: 1000;
   width: 100px;
 }
-.card:hover .card-btn,.card:hover .set-love-product{
+.card:hover .card-btn,
+.card:hover .set-love-product {
   display: block !important;
 }
-.btn-card{
+.btn-card {
   background-color: #f0f0f4;
   border-radius: 5px;
   font-size: 15px;
 }
-.btn-card:hover{
+.btn-card:hover {
   background-color: pink;
   color: white;
 }
-.discount{
+.discount {
   position: absolute !important;
   background-color: #ff3300;
   color: #fff;
@@ -541,10 +542,10 @@ input {
   top: 2px;
   left: 10px;
 }
-.card-icon{
+.card-icon {
   color: #d93636;
 }
-.set-love-product{
+.set-love-product {
   position: absolute !important;
   top: 2px;
   right: 10px;
@@ -635,4 +636,41 @@ input {
 .btnBanner:hover {
   background-color: white;
   color: #000;
+}
+.banner-index {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  max-width: 385px;
+}
+
+.banner-img-index {
+  height: auto; 
+  object-fit: cover; 
+  transition: transform 0.3s ease; 
+  border-radius: 5px;
+}
+
+.banner-btn-name {
+  position: absolute;
+  top: 80%;
+  left: 35%;
+  background-color: #fdb5b9;
+  color: #fff;
+  font-size: 18px;
+  max-width: 200px;
+  border-radius: 5px;
+  padding: 2px 5px;
+}
+
+.banner-btn-name:hover {
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+.banner-index:hover .banner-img-index {
+  transform: scale(1.1);
 }

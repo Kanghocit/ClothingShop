@@ -550,14 +550,6 @@ input {
   right: 10px;
   display: none;
 }
-
-/* .card:hover .card-btn {
-  display: block;
-  cursor: pointer;
-  background-color: #e64a19;
-  transform: scale(1.1);
-} */
-
 .brand-name {
   font-size: 14px; /* Kích thước chữ nhỏ hơn */
   color: #aeaeae;

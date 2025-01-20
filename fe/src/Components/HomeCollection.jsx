@@ -78,8 +78,8 @@ const HomeCollection = () => {
           List các nhóm sản phẩm nổi bật nhất
         </div>
       </div>
-      <div className="hc-list container d-flex justify-content-center align-items-center">
-        <div className="hc-list-item p-1 ">
+      <div className="hc-list container-fluid d-flex justify-content-center align-items-center">
+        <div className="hc-list-item p-3 ms-5">
           <div className="hc-item-image">
             <img
               src="https://bizweb.dktcdn.net/thumb/large/100/520/624/themes/974135/assets/home_collection_list_item_image__1.jpg?1731543625371"
@@ -89,7 +89,7 @@ const HomeCollection = () => {
           </div>
           <span>Flash Sale</span>
         </div>
-        <div className="hc-list-item p-1 ">
+        <div className="hc-list-item p-3 ">
           <div className="hc-item-image">
             <img
               src="https://bizweb.dktcdn.net/thumb/large/100/520/624/themes/974135/assets/home_collection_list_item_image__2.jpg?1731543625371"
@@ -99,7 +99,7 @@ const HomeCollection = () => {
           </div>
           <span>Áo ngủ</span>
         </div>
-        <div className="hc-list-item p-1 ">
+        <div className="hc-list-item p-3 ">
           <div className="hc-item-image">
             <img
               src="https://bizweb.dktcdn.net/thumb/large/100/520/624/themes/974135/assets/home_collection_list_item_image__3.jpg?1731543625371"
@@ -109,7 +109,7 @@ const HomeCollection = () => {
           </div>
           <span>Áo kiều</span>
         </div>
-        <div className="hc-list-item p-1 ">
+        <div className="hc-list-item p-3 ">
           <div className="hc-item-image">
             <img
               src="https://bizweb.dktcdn.net/thumb/large/100/520/624/themes/974135/assets/home_collection_list_item_image__4.jpg?1731543625371"
@@ -119,7 +119,7 @@ const HomeCollection = () => {
           </div>
           <span>Đầm</span>
         </div>
-        <div className="hc-list-item p-1 ">
+        <div className="hc-list-item p-3 ">
           <div className="hc-item-image">
             <img
               src="https://bizweb.dktcdn.net/thumb/large/100/520/624/themes/974135/assets/home_collection_list_item_image__5.jpg?1731543625371"
@@ -129,7 +129,7 @@ const HomeCollection = () => {
           </div>
           <span>Quần</span>
         </div>
-        <div className="hc-list-item p-1 ">
+        <div className="hc-list-item p-3 ">
           <div className="hc-item-image">
             <img
               src="https://bizweb.dktcdn.net/thumb/large/100/520/624/themes/974135/assets/home_collection_list_item_image__6.jpg?1731543625371"
@@ -139,7 +139,7 @@ const HomeCollection = () => {
           </div>
           <span>Váy</span>
         </div>
-        <div className="hc-list-item p-1 ">
+        <div className="hc-list-item p-3 ">
           <div className="hc-item-image">
             <img
               src="https://bizweb.dktcdn.net/thumb/large/100/520/624/themes/974135/assets/home_collection_list_item_image__7.jpg?1731543625371"
@@ -149,7 +149,7 @@ const HomeCollection = () => {
           </div>
           <span>Áo thun</span>
         </div>
-        <div className="hc-list-item p-1 ">
+        <div className="hc-list-item p-3 ">
           <div className="hc-item-image">
             <img
               src="https://bizweb.dktcdn.net/thumb/large/100/520/624/themes/974135/assets/home_collection_list_item_image__8.jpg?1731543625371"
@@ -160,7 +160,7 @@ const HomeCollection = () => {
           <span>Áo khoác</span>
         </div>
       </div>
-      <div className="home-flashsale container mt-5 ms-5 row">
+      <div className="home-flashsale container-fluid mt-5 ms-5 row">
         <div className="hf-left col-4">
           <div className="img-wrapper">
             <img
@@ -196,17 +196,13 @@ const HomeCollection = () => {
           </div>
         </div>
 
-        <div className="hf-right col-8 d-flex">
+        <div className="hf-right col-8 d-flex pe-5">
           <Slider {...settings} className="slider-card">
             <Card />
-
             <Card />
-
             <Card />
-
             <Card />
           </Slider>
-          
         </div>
       </div>
     </div>

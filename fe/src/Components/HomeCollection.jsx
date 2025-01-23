@@ -3,7 +3,8 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Card from "./Card/index";
-import Slider from "react-slick";
+import SliderCard from "./Slider/SliderCard";
+
 
 const HomeCollection = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -51,16 +52,7 @@ const HomeCollection = () => {
 
     return () => clearInterval(countdown);
   }, []);
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    arrows: true,
-  };
+  
 
   return (
     <div className="homeCollection">
@@ -197,12 +189,7 @@ const HomeCollection = () => {
         </div>
 
         <div className="hf-right col-8 d-flex pe-5">
-          <Slider {...settings} className="slider-card">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-          </Slider>
+          <SliderCard slidesToScroll={1} slidesToShow={4}/>
         </div>
       </div>
     </div>

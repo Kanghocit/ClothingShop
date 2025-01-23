@@ -38,11 +38,8 @@ const Banner = () => {
       <div className="banner-wrapper container pt-3 row mx-auto">
         {banner.map((item, index) => (
           <div className={"banner-index col-4 mx-3"} key={index}>
-            <img
-              src={item.img}
-              className="banner-img-index w-100 "
-            />
-            <div className="banner-btn-name mx-auto px-2">{item.name}</div>
+            <img src={item.img} className="banner-img-index w-100 " />
+            <div className="banner-btn-name mx-auto px-2 py-1">{item.name}</div>
           </div>
         ))}
       </div>

@@ -6,3 +6,4 @@ export { default as Footer } from "./Footer";
 export { default as Trending } from "./Trending";
 export { default as BestSeller } from "./BestSeller";
 export { default as Vendor } from "./Vendor";
+export { default as HotSale } from "./HotSale";

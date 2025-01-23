@@ -17,16 +17,16 @@ const HeaderMenu = () => {
           <div className="dropContainer"></div>
           <ul className="dropdown-menu">
             <li className="dropdown-item">
-              <Link to={"/danh-muc-1"}>Cocktail Dresses</Link>
+              <Link to={"/danh-muc-1"}>Dresses</Link>
             </li>
             <li className="dropdown-item">
-              <Link to={"/danh-muc-2"}>Casual Jumpsuits</Link>
+              <Link to={"/danh-muc-2"}>Jumpsuits</Link>
             </li>
             <li className="dropdown-item">
-              <Link to={"/danh-muc-3"}>Formal Pants</Link>
+              <Link to={"/danh-muc-3"}>Pants</Link>
             </li>
             <li className="dropdown-item">
-              <Link to={"/danh-muc-4"}>Knitted Sweaters</Link>
+              <Link to={"/danh-muc-4"}>Sweaters</Link>
             </li>
           </ul>
         </li>

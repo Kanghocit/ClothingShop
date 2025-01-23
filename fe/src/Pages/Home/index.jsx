@@ -8,6 +8,7 @@ import {
   Trending,
   BestSeller,
   Vendor,
+  HotSale,
 } from "../../Components";
 
 
@@ -30,6 +31,7 @@ const Home = () => {
       <Trending />
       <BestSeller />
       <Vendor />
+      <HotSale/>
       <Footer />
     </>
   );

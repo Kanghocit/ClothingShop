@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import Card from "../Card/index";
 
-const SliderCard = ({ slidesToShow, slidesToScroll, imgListSrc }) => {
+const SliderCard = ({ slidesToShow, slidesToScroll }) => {
   const settings = {
     dots: false,
     infinite: true,

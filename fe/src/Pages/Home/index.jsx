@@ -6,6 +6,7 @@ import {
   Banner,
   Footer,
   Trending,
+  BestSeller,
 } from "../../Components";
 
 const Home = () => {
@@ -25,6 +26,7 @@ const Home = () => {
       <HomeCollection />
       <Banner />
       <Trending />
+      <BestSeller />
       <Footer />
     </>
   );

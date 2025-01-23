@@ -19,7 +19,10 @@ const SliderCard = ({ slidesToShow, slidesToScroll, imgListSrc }) => {
       <Card />
       <Card />
       <Card />
+      <Card />
+      <Card />
     </Slider>
+    //min 5
   );
 };
 

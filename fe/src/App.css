@@ -505,6 +505,8 @@ input {
 .cardImg {
   border-radius: 5px;
   min-height: 350px;
+  max-height: 350px;
+  
   width: 100%;
   object-fit: cover;
   position: relative !important;

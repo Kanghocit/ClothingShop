@@ -506,7 +506,7 @@ input {
   border-radius: 5px;
   min-height: 350px;
   max-height: 350px;
-  
+
   width: 100%;
   object-fit: cover;
   position: relative !important;
@@ -690,6 +690,7 @@ input {
   height: auto;
   transition: transform 0.5s ease;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .zoom-container:hover .zoom-image {
@@ -725,4 +726,29 @@ input {
 }
 .trending-img {
   border-radius: 5px;
+}
+/* vender */
+.vender {
+  position: relative; /* Đảm bảo .vender là cha chứa tương đối */
+  overflow: hidden; /* Để tránh nội dung bị tràn */
+}
+
+.vender-img {
+  width: 100%; 
+  max-height: 270px;
+  object-fit: cover;
+  opacity: 0.9;
+  border-radius: 5px;
+}
+.vender-content {
+  position: absolute;
+  top: 45%;
+  left: 30%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: translate(-20%, -35%); /* Căn chỉnh chính xác */
 }

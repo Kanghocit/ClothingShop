@@ -7,7 +7,9 @@ import {
   Footer,
   Trending,
   BestSeller,
+  Vendor,
 } from "../../Components";
+
 
 const Home = () => {
   const imgListSrc = [
@@ -27,6 +29,7 @@ const Home = () => {
       <Banner />
       <Trending />
       <BestSeller />
+      <Vendor />
       <Footer />
     </>
   );

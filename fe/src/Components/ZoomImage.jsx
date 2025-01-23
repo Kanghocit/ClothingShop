@@ -8,7 +8,6 @@ const ZoomImage = ({ src, layer, content }) => {
     <div className="zoom-container">
       {layer ? (
         <>
-          {/* Check if content is an array */}
           {Array.isArray(content) ? (
             content.map((item, index) => (
               <div key={index} className="zoom-layer">
@@ -21,7 +20,6 @@ const ZoomImage = ({ src, layer, content }) => {
               </div>
             ))
           ) : (
-            // Render content if it's a single object
             <>
               <img className="zoom-image h-100" src={src} alt="Zoom" />
               <div className="zoom-layer">

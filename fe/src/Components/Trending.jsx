@@ -42,7 +42,7 @@ const Trending = () => {
             }
           />
         </div>
-        <div className="col-6">
+        <div className="col-6 trending-slider">
           {" "}
           <SliderCard slidesToScroll={1} slidesToShow={3} />
         </div>

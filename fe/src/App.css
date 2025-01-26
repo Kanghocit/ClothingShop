@@ -101,9 +101,22 @@ body {
   border-bottom: 3px solid #dcdcdc;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   position: fixed;
+  top: 0;
+  width: 100%;
   z-index: 1000;
   background-color: white;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
+.header.hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.content {
+  padding-top: 60px; /* Để không che nội dung bởi header */
+}
+
 /* custom link */
 .list-inline-item a {
   color: #333333;
@@ -724,6 +737,9 @@ input {
 .trending-img {
   border-radius: 5px;
 }
+.col-6.trending-slider .cardImg {
+  min-height: 350px !important;
+}
 /* vender */
 .vender {
   position: relative; /* Đảm bảo .vender là cha chứa tương đối */
@@ -755,7 +771,13 @@ input {
 .col-6 .cardImg {
   min-height: 520px; /* Khi trong cột col-6, min-height là 530px */
 }
-.hot-sale-show img{
+.hot-sale-show img {
   max-height: 440px;
   border-radius: 5px;
+}
+/* footer */
+.footer {
+  background-image: url("https://bizweb.dktcdn.net/100/520/624/themes/974135/assets/footers2_background.jpg?1731543625371");
+  height: 100%;
+  width: 100%;
 }

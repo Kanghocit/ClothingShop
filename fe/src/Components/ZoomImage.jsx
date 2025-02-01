@@ -1,5 +1,5 @@
 import React from "react";
-import "../App.css";
+import '../css/App.css'
 
 const ZoomImage = ({ src, layer, content }) => {
   console.log("content:", content);

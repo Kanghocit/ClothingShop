@@ -9,35 +9,25 @@ import HeaderMenu from "./HeaderMenu";
 
 const Header = () => {
   const [isHidden, setIsHidden] = useState(false);
-  const [lastScrollTop, setLastScrollTop] = useState(0); 
-  const [scrollCount, setScrollCount] = useState(0); 
+  const [lastScrollTop, setLastScrollTop] = useState(0);
+  const hideThreshold = 10; 
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScroll = window.scrollY;
 
-      if (currentScroll > lastScrollTop) {
-        // Người dùng cuộn xuống
-        setScrollCount((prev) => prev + 1);
-        if (scrollCount >= 2) {
-          setIsHidden(true); // Ẩn header nếu cuộn xuống 2 lần
-        }
+      if (currentScroll > lastScrollTop && currentScroll > hideThreshold) {
+        setIsHidden(true); 
       } else {
-        // Người dùng cuộn lên
-        setScrollCount(0); // Reset đếm cuộn xuống
-        setIsHidden(false); // Hiện header ngay lập tức
+        setIsHidden(false); 
       }
 
-      setLastScrollTop(currentScroll <= 0 ? 0 : currentScroll); // Không để giá trị âm
+      setLastScrollTop(currentScroll);
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      // Dọn dẹp sự kiện để tránh rò rỉ bộ nhớ
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [lastScrollTop, scrollCount]);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollTop]);
   return (
     <div className={`header ${isHidden ? "hidden" : ""} container-fluid`}>
       <div className="top-header row">

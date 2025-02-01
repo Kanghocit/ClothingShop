@@ -32,7 +32,6 @@ const Home = () => {
       <BestSeller />
       <Vendor />
       <HotSale/>
-      <Footer />
     </>
   );
 };

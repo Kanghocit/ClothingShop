@@ -554,7 +554,7 @@ input {
   width: fit-content;
   height: 25px;
   border: none;
-  top: 2px;
+  top: 4px;
   left: 10px;
 }
 .card-icon {
@@ -777,7 +777,66 @@ input {
 }
 /* footer */
 .footer {
-  background-image: url("https://bizweb.dktcdn.net/100/520/624/themes/974135/assets/footers2_background.jpg?1731543625371");
+  position: relative;
+  font-size: 15 px;
   height: 100%;
   width: 100%;
+  background-image: url("https://bizweb.dktcdn.net/100/520/624/themes/974135/assets/footers2_background.jpg?1731543625371");
+  background-size: cover;
+  background-position: center;
+}
+.footer p {
+  color: #000;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8); /* Màu nền và độ trong suốt */
+  z-index: 1;
+}
+
+.footer-content {
+  position: relative;
+  z-index: 2; /* Đảm bảo nội dung hiển thị trên lớp phủ */
+  color: black; /* Màu chữ */
+  padding: 20px; /* Khoảng cách nội dung với viền */
+}
+
+.footer a {
+  text-decoration: none;
+  color: black;
+}
+.footer a:hover,
+.footer-connect span:hover {
+  color: #fdb5b9 !important;
+}
+.footer-logo {
+  max-width: 120px;
+  height: auto;
+}
+/* collection */
+.collection-container-header {
+  background-color: #f9f9f9;
+}
+.collection-header {
+}
+.collection-container-header a {
+  text-decoration: none;
+  color: #000;
+  font-size: medium;
+}
+.address {
+  color: #fdb5b9 !important;
+}
+.choice{
+  max-height: 25px !important;
+  font-size: 10px !important;
+}
+.brand{
+  font-size: 16px;
 }

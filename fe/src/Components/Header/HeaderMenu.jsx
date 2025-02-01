@@ -17,19 +17,20 @@ const HeaderMenu = () => {
           <div className="dropContainer"></div>
           <ul className="dropdown-menu">
             <li className="dropdown-item">
-              <Link to={"/danh-muc-1"}>Dresses</Link>
+              <a href="/collections">Dresses</a>
             </li>
             <li className="dropdown-item">
-              <Link to={"/danh-muc-2"}>Jumpsuits</Link>
+              <a href="/collections">Jumpsuits</a>
             </li>
             <li className="dropdown-item">
-              <Link to={"/danh-muc-3"}>Pants</Link>
+              <a href="/collections">Pants</a>
             </li>
             <li className="dropdown-item">
-              <Link to={"/danh-muc-4"}>Sweaters</Link>
+              <a href="/collections">Sweaters</a>
             </li>
           </ul>
         </li>
+
         <li className="list list-inline-item px-2 position-relative dropdown-parent">
           <Link to={"/"}>
             Sản phẩm nổi bật <FaAngleRight size={"12px"} />
@@ -60,7 +61,6 @@ const HeaderMenu = () => {
       </ul>
 
       {/* CSS */}
-      
     </div>
   );
 };

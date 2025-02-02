@@ -823,8 +823,6 @@ input {
 .collection-container-header {
   background-color: #f9f9f9;
 }
-.collection-header {
-}
 .collection-container-header a {
   text-decoration: none;
   color: #000;
@@ -839,4 +837,37 @@ input {
 }
 .brand{
   font-size: 16px;
+}
+/* selectForm */
+.select-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 20px 0; */
+}
+
+.custom-select {
+  padding: 2px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.custom-select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+.custom-select option {
+  background: white;
+  color: black;
+  padding: 10px;
+}
+.content-right{
+  overflow-y: auto;
+  height: 850px;
 }

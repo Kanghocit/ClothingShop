@@ -870,4 +870,5 @@ input {
 .content-right{
   overflow-y: auto;
   height: 850px;
+  /* position: sticky; */
 }

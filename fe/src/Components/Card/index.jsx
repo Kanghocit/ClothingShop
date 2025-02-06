@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Rating from "@mui/material/Rating";
 import SubCard from "./subCard";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
+import SeeFastProduct from "../SeeFastProduct";
 
 const Card = () => {
   const [value, setValue] = useState(4);
@@ -12,8 +13,7 @@ const Card = () => {
     setSelectedImage(imageUrl);
   };
 
-  const [loveProduct, setLoveProduct] = useState(false); // Corrected default value
-
+  const [loveProduct, setLoveProduct] = useState(false); 
   const handleSetLove = () => {
     setLoveProduct(!loveProduct);
   };
@@ -36,7 +36,9 @@ const Card = () => {
       <SubCard imgSend={handleImageSelection} />
       <div className="card-btn">
         <div className="btn-card mb-1 px-1 py-1">Thêm vào giỏ</div>
-        <div className="btn-card mb-2 px-1 py-1">Xem nhanh</div>
+        <div className="btn-card mb-2 px-1 py-1">
+          <SeeFastProduct /> 
+        </div>
       </div>
       <div className="discount d-flex justify-content-center align-items-center">
         -10%
